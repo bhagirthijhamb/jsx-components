@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import faker from 'faker';
+import CommentDetail from  './CommentDetail';
 
 // function getButtonText(){
 //   return 'Click on me!';
@@ -25,22 +26,11 @@ const App = () => {
       // {/* <button style={{ backgroundColor:  'blue', color: 'white'}}>{btnText}</button> */}
       // {/* <button style={style}>{btnText.text}</button> */}
     // </div>  
+
     <div className="ui container comments">
-      <div className="comment">
-        <a href="/" className="avatar">
-          {/* <img alt="avatar" src={faker.image.avatar()} /> */}
-          <img alt="avatar" src={faker.image.cats()} />
-        </a>
-        <div className="content"> 
-          <a href="/" className="author">
-            Sam
-          </a>
-          <div className="metadata">
-            <span className="date">Today st 6:00PM</span>
-          </div>
-          <div className="text">Nice blog post!</div>
-        </div>
-      </div>
+      <CommentDetail author="Sam" timeAgo="Today at 4:45PM" comment="Nice blog post" avatar={faker.image.image()} />
+      <CommentDetail author="Alex" timeAgo="Today at 2:00AM" comment="I like the subject" avatar={faker.image.image()} />
+      <CommentDetail author="Jane" timeAgo="Yesterday at 5:00PM" comment="I like the writing" avatar={faker.image.image()} />
     </div>
   )
 }
